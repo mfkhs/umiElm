@@ -1,9 +1,12 @@
 import React from 'react';
+import HeaderTop from '@/compoents/header'
 
-export default () => {
+const Home = () => {
   return (
     <div>
-      <h1>Page index</h1>
+      <HeaderTop />
     </div>
   );
 };
+
+export default Home

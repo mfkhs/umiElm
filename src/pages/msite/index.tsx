@@ -1,7 +1,10 @@
-import React from 'react';
-import { connect } from 'umi';
+import React, { FC } from 'react';
+import { connect, MisteModelState } from 'umi';
 
-const Msite = ({ miste }) => {
+interface MsiteProps {
+  miste: MisteModelState;
+}
+const Msite: FC<MsiteProps> = ({ miste }) => {
   return (
     <div>
       <h1>Page index{miste.name}</h1>
@@ -9,7 +12,7 @@ const Msite = ({ miste }) => {
   );
 };
 
-const mapStateToProps = ({ miste }) => {
+const mapStateToProps = ({ miste }: { miste: MisteModelState }) => {
   return {
     miste,
   };

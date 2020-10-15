@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "set PORT = 8005 && umi dev",
+    "start": "set PORT=8005&&umi dev",
     "build": "umi build",
     "postinstall": "umi generate tmp",
     "dva": "umi dva list model",

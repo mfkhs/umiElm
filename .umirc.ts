@@ -10,4 +10,11 @@ export default defineConfig({
     immer: true,
     hmr: true,
   },
+  antd: {
+    dark: true,
+    compact: true,
+  },
+  extraBabelPlugins:[
+    ['import', { libraryName: 'antd-mobile', style: true }]  //按需加载antd-mobile样式文件
+  ],
 });

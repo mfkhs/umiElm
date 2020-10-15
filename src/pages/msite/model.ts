@@ -2,7 +2,15 @@ import { Effect, ImmerReducer, Reducer, Subscription } from 'umi';
 import { getMistedata } from '@/until/api';
 
 export interface MisteModelState {
-  miste: object;
+  abbr: string;
+  area_code: string | number;
+  id: number;
+  is_map: boolean;
+  latitude: number;
+  longitude: number;
+  name: string;
+  pinyin: string;
+  sort: number;
 }
 export interface MisteModelType {
   namespace: 'miste';
@@ -18,11 +26,20 @@ export interface MisteModelType {
   subscriptions: { setup: Subscription };
 }
 
+const initialMsiteState = {
+  abbr: '',
+  area_code: '',
+  id: 0,
+  is_map: true,
+  latitude: 0,
+  longitude: 0,
+  name: '',
+  pinyin: '',
+  sort: 0,
+};
 const MsiteModle: MisteModelType = {
   namespace: 'miste',
-  state: {
-    miste: {},
-  },
+  state: initialMsiteState,
   reducers: {
     getMsite(state, { payload }) {
       console.log(payload);
