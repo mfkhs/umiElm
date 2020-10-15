@@ -27,7 +27,7 @@ export default [
           {
             exact: true,
             path: '/shop/shopDetail/shopSafe',
-            component: '@/pages/shop/shopDetail/shopSafe/index',
+            comments: '@/pages/shop/shopDetail/shopSafe/index',
           },
         ],
       },

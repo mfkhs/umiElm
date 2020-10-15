@@ -6,4 +6,8 @@ export default defineConfig({
     type: 'none',
   },
   routes,
+  dva: {
+    immer: true,
+    hmr: true,
+  },
 });

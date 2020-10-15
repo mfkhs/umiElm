@@ -1,9 +1,18 @@
 import React from 'react';
+import { connect } from 'umi';
 
-export default () => {
+const Msite = ({ miste }) => {
   return (
     <div>
-      <h1>Page index</h1>
+      <h1>Page index{miste.name}</h1>
     </div>
   );
 };
+
+const mapStateToProps = ({ miste }) => {
+  return {
+    miste,
+  };
+};
+
+export default connect(mapStateToProps)(Msite);
