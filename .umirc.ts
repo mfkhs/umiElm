@@ -10,6 +10,13 @@ export default defineConfig({
     immer: true,
     hmr: true,
   },
+  targets: {
+    android: 5,
+    ios: 7,
+    chrome: 58,
+    ie: 11,
+  },
+  ignoreMomentLocale: true,
   antd: {
     dark: true,
     compact: true,

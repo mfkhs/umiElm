@@ -48,7 +48,7 @@ const MsiteModle: MisteModelType = {
   },
   effects: {
     *reqMsite({ payload }, { call, put }) {
-      const data = yield call(getMistedata);
+      const data = yield call(resCityGuess);
       yield put({
         type: 'getMsite',
         payload: data,
