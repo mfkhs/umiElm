@@ -1,7 +1,8 @@
 export default [
   { exact: true, path: '/', redirect: '/home' },
+  { exact: true, path: '/city', redirect: '/city/1' },
   { exact: true, path: '/home', component: '@/pages/home/index' },
-  { exact: true, path: '/city/:cityid', component: '@/pages/city/index' },
+  { exact: false, path: '/city', component: '@/pages/city/index' },
   { exact: true, path: '/msite', component: '@/pages/msite/index' },
   { exact: true, path: '/food', component: '@/pages/food/index' },
   { exact: true, path: '/search/:geohash', component: '@/pages/search/index' },
