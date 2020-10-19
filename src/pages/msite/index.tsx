@@ -13,9 +13,11 @@ const Msite: FC<MsiteProps> = ({ miste }) => {
 };
 
 const mapStateToProps = ({ miste }: { miste: MisteModelState }) => {
+  console.log(miste)
   return {
     miste,
   };
 };
+
 
 export default connect(mapStateToProps)(Msite);

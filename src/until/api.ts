@@ -45,7 +45,7 @@ export const resCurrentcity = (number: number) => {
  * 获取搜索地址
  */
 
-export const reqSearchplace = (cityid: number, value: string) => {
+export const reqSearchplace = ({ cityid, value }: { cityid: number, value: string }) => {
   return HttpRequest({
     method: 'get', // 如果是get方法可省
     body: {

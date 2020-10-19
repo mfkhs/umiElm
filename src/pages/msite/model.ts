@@ -1,5 +1,5 @@
 import { Effect, ImmerReducer, Reducer, Subscription } from 'umi';
-import { getMistedata } from '@/until/api';
+import { resCityGuess } from '@/until/api';
 
 export interface MisteModelState {
   abbr: string;
@@ -42,7 +42,7 @@ const MsiteModle: MisteModelType = {
   state: initialMsiteState,
   reducers: {
     getMsite(state, { payload }) {
-      console.log(payload);
+      console.log(state, payload);
       return payload;
     },
   },

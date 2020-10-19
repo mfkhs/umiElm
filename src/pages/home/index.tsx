@@ -4,7 +4,7 @@ import { NavBar, Icon } from 'antd-mobile';
 import styles from './index.less'
 import { resCityGuess, resHotcity, resGroupcity } from '@/until/api'
 import { sortgroupcity } from '@/until/util'
-import { cityItem } from '@/until/tsinfarfance'
+import { cityInfo } from '@/until/tsinfarfance'
 
 
 const Home = () => {
@@ -64,7 +64,7 @@ const Home = () => {
         <h4 className={styles.city_title}>热门城市</h4>
         <ul className={styles.citylistul}>
           {
-            data.hotcity.map((item: cityItem, index: number) => {
+            data.hotcity.map((item: cityInfo, index: number) => {
               return (<li onClick={() => toRoute('/city', item.id)} key={`${index}` + item.area_code}>{item.name}</li>)
             })
           }
@@ -82,7 +82,7 @@ const Home = () => {
                   </h4>
                   <ul className={styles.citylistul}>
                     {
-                      sortgroupcity(data.groupcity)[itemkey].map((item: cityItem, index: number) => {
+                      sortgroupcity(data.groupcity)[itemkey].map((item: cityInfo, index: number) => {
                         return (
                           <li className={`ellipsis ${styles.title}`} key={`${index}${item.id}`}
                             onClick={() => toRoute('/city', item.id)}
